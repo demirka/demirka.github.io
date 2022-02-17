@@ -31,6 +31,7 @@ Work experience
 * Nov 2018-Aug 2019: Research Assistant
   * School of Mathematics and Statistics (SMS), Victoria University of Wellington (VUW)
   * Clustering using expectation maximisation in Python, model selection and generalised linear models models in R.
+  
 Skills
 ======
 * Python
