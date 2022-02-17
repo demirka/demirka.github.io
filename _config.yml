@@ -191,6 +191,7 @@ collections:
 
 # Defaults
 defaults:
+  # _research
   # _posts
   - scope:
       path: ""
