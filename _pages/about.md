@@ -56,6 +56,7 @@ body {
   line-height: 1.65;
   text-align: justify;
   text-justify: inter-word;
+  font-style: italic; /* Add this for italic styling */
 }
 
 .page__content li {
@@ -84,7 +85,7 @@ body {
 }
 
 .pdf-preview {
-  width: 100%;
+  width: auto;
   height: auto;
   border: 0;
   display: block;
