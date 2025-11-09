@@ -11,7 +11,7 @@ redirect_from:
 <style>
 body {
   font-family: 'Segoe UI Light', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.85em;
+  font-size: 0.70em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -106,7 +106,7 @@ body {
 }
 </style>
 
-Senior data and AI expert with over 7 years of combined experience spanning government, consulting, and academic sectors. Deep knowledge of AI from an academic perspective with practical delivery of cloud-native, production-ready solutions in consulting/public sector scenes. Proven in leading client-facing, high-impact AI projects from concept to deployment, driving innovation and responsible governance.
+Senior Artificial Intelligence (AI) practitioner with over 7 years of combined experience spanning government, consulting, and academic sectors. I have a deep knowledge of AI from an academic perspective with practical delivery of cloud-native, production-ready solutions in consulting/public sector scenes. Proven in leading client-facing, high-impact AI projects from concept to deployment, driving innovation and responsible governance.
 
 ## Expertise
 
@@ -177,12 +177,12 @@ My research pairs theoretical guarantees with production-grade AI engineering, b
 Multi-label models carry real security risk when malicious actors tamper with co-occurring labels. I developed a CMA-ES driven adversarial training framework that operates in tabulated domains, crafting structured yet concealable perturbations without needing access to the target model. The many-objective formulation balances attack success (81–100% in evaluation), robustness, and stealth—giving public-sector teams a realistic picture of how resilient their classifiers truly are.
 
 <div class="pdf-container">
-  <iframe src="{{ '/files/extra_content/flowchart_mlmap.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH' | relative_url }}" class="pdf-preview" title="CMA-ES adversarial training flowchart"></iframe>
+  <iframe src="{{ '/files/extra_content/flowchart_mlmap.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitW' | relative_url }}" class="pdf-preview" title="CMA-ES adversarial training flowchart"></iframe>
 </div>
 <p class="pdf-caption">CMA-ES orchestrated adversarial training pipeline across proxy and target multi-label models.</p>
 
 <div class="pdf-container">
-  <iframe src="{{ '/files/extra_content/structured_adversarial.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH' | relative_url }}" class="pdf-preview" title="Structured adversarial perturbation analysis"></iframe>
+  <iframe src="{{ '/files/extra_content/structured_adversarial.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitW' | relative_url }}" class="pdf-preview" title="Structured adversarial perturbation analysis"></iframe>
 </div>
 <p class="pdf-caption">Visual analysis of structured adversarial examples demonstrating concealability across correlated labels.</p>
 
@@ -190,7 +190,7 @@ Multi-label models carry real security risk when malicious actors tamper with co
 Surrogate losses often undermine multi-label consistency. CLML maximises a Lebesgue hypervolume to align simultaneously with conflicting loss functions, delivering a provably consistent learner that still runs on lightweight feed-forward architectures. The approach outperforms graph-enhanced and perturbation-heavy baselines, showing that principled measure design can eclipse brute-force model complexity.
 
 <div class="pdf-container">
-  <iframe src="{{ '/files/extra_content/lebesgue1.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH' | relative_url }}" class="pdf-preview" title="Lebesgue measure illustration"></iframe>
+  <iframe src="{{ '/files/extra_content/lebesgue1.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitW' | relative_url }}" class="pdf-preview" title="Lebesgue measure illustration"></iframe>
 </div>
 <p class="pdf-caption">Geometric interpretation of the Lebesgue measure maximisation that underpins CLML.</p>
 
