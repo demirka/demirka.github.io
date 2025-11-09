@@ -11,7 +11,7 @@ redirect_from:
 <style>
 body {
   font-family: 'Segoe UI Light', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.70em;
+  font-size: 0.75em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -85,7 +85,7 @@ body {
 
 .pdf-preview {
   width: 100%;
-  height: 540px;
+  height: auto;
   border: 0;
   display: block;
   background: #ffffff;
@@ -174,7 +174,7 @@ Thesis: *Evolutionary Representation Learning of Structured Multi-label Data*
 My research pairs theoretical guarantees with production-grade AI engineering, building trustworthy systems for high-stakes environments.
 
 ### Evolutionary Adversarial Training for Multi-Label Security (TEVC 2025)
-Multi-label models carry real security risk when malicious actors tamper with co-occurring labels. I developed a CMA-ES driven adversarial training framework that operates in tabulated domains, crafting structured yet concealable perturbations without needing access to the target model. The many-objective formulation balances attack success (81–100% in evaluation), robustness, and stealth—giving public-sector teams a realistic picture of how resilient their classifiers truly are.
+Multi-label models carry real security risk when malicious actors tamper with co-occurring labels. I developed a CMA-ES driven adversarial training framework that operates in tabulated domains, crafting structured yet concealable perturbations without needing access to the target model. The many-objective formulation balances attack success (81–100% in evaluation), robustness, and stealth.
 
 <div class="pdf-container">
   <iframe src="{{ '/files/extra_content/flowchart_mlmap.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitW' | relative_url }}" class="pdf-preview" title="CMA-ES adversarial training flowchart"></iframe>
