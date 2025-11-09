@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Kaan Demir / Homepage"
+title                    : "Kaan Demir"
 title_separator          : "-"
 name                     : &name "Kaan Demir"
-description              : &description "Ph.D. Student"
+description              : &description "Ph.D. Candidate in Computer Science"
 url                      : https://demirka.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "demirka/demirka.github.io"
@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Kaan Demir"
   avatar           : "profile.jpg"
-  bio              : "Ph.D. Student. Victoria University of Wellington (VUW), New Zealand."
-  location         : "Location"
+  bio              : "Ph.D. Candidate in Computer Science (Evolutionary Computation & Machine Learning)"
+  location         : "Wellington, New Zealand"
   employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=5uEaJosAAAAJ&hl=en"
@@ -109,7 +109,7 @@ author:
   stackoverflow    :
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          :
   vine             :
   weibo            :
   xing             :
