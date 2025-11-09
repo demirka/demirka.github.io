@@ -178,12 +178,12 @@ My research pairs theoretical guarantees with production-grade AI engineering, b
 Multi-label models carry real security risk when malicious actors tamper with co-occurring labels. I developed a CMA-ES driven adversarial training framework that operates in tabulated domains, crafting structured yet concealable perturbations without needing access to the target model. The many-objective formulation balances attack success (81–100% in evaluation), robustness, and stealth.
 
 <div class="pdf-container">
-  <iframe src="{{ '/files/extra_content/flowchart_mlmap.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH' | relative_url }}" class="pdf-preview" title="CMA-ES adversarial training flowchart"></iframe>
+  <img src="{{ '/files/extra_content/flowchart_mlmap.png' | relative_url }}" alt="CMA-ES adversarial training flowchart" class="pdf-preview" />
 </div>
 <p class="pdf-caption">CMA-ES orchestrated adversarial training pipeline across proxy and target multi-label models.</p>
 
 <div class="pdf-container">
-  <iframe src="{{ '/files/extra_content/structured_adversarial.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH' | relative_url }}" class="pdf-preview" title="Structured adversarial perturbation analysis"></iframe>
+  <img src="{{ '/files/extra_content/structured_adversarial.png' | relative_url }}" alt="Structured adversarial perturbation analysis" class="pdf-preview" />
 </div>
 <p class="pdf-caption">Visual analysis of structured adversarial examples demonstrating concealability across correlated labels.</p>
 
@@ -191,7 +191,7 @@ Multi-label models carry real security risk when malicious actors tamper with co
 Surrogate losses often undermine multi-label consistency. CLML maximises a Lebesgue hypervolume to align simultaneously with conflicting loss functions, delivering a provably consistent learner that still runs on lightweight feed-forward architectures. The approach outperforms graph-enhanced and perturbation-heavy baselines, showing that principled measure design can eclipse brute-force model complexity.
 
 <div class="pdf-container">
-  <iframe src="{{ '/files/extra_content/lebesgue1.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH' | relative_url }}" class="pdf-preview" title="Lebesgue measure illustration"></iframe>
+  <img src="{{ '/files/extra_content/lebesgue1.png' | relative_url }}" alt="Lebesgue measure illustration" class="pdf-preview" />
 </div>
 <p class="pdf-caption">Geometric interpretation of the Lebesgue measure maximisation that underpins CLML.</p>
 

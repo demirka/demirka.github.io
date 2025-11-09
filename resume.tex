@@ -1,4 +1,4 @@
- \documentclass[10pt, letterpaper]{article}
+\documentclass[10pt, letterpaper]{article}
 
 % Packages:
 \usepackage[
@@ -14,7 +14,7 @@
 \usepackage{tabularx} % for making tables with fixed width columns
 \usepackage{array} % tabularx requires this
 \usepackage[dvipsnames]{xcolor} % for coloring text
-\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\definecolor{primaryColor}{RGB}{0, 102, 204} % Professional blue tone
 \usepackage{enumitem} % for customizing lists
 \usepackage{fontawesome5} % for using icons
 \usepackage{amsmath} % for math
@@ -56,7 +56,8 @@
 \setlength{\columnsep}{0.15cm} % set column seperation
 \pagenumbering{gobble} % no page numbering
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titleformat{\section}{\color{primaryColor}\normalfont\Large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\color{primaryColor}\normalfont\large\bfseries}{}{0em}{}
 
 \titlespacing{\section}{
     % left space:
@@ -180,6 +181,10 @@
         \AND%
         \kern 5.0 pt%
         \mbox{\hrefWithoutArrow{https://scholar.google.com/citations?user=5uEaJosAAAAJ\&hl=en}{https://scholar.google.com/citations?user=5uEaJosAAAAJ\&hl=en/}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://demirka.github.io}{https://demirka.github.io}}%
         \kern 5.0 pt%
     \end{header}
 
