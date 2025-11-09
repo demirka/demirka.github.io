@@ -1,87 +1,270 @@
 ---
 permalink: /
 title: "Dr. Kaan Demir"
-excerpt: "AI & Data Engineer"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
-
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+  --ink: #1f2a37;
+  --muted: #738195;
+  --accent: #263659;
+  --line: #e4e8f3;
+}
+
 body {
-  font-size: 0.88em;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 1.02em;
+  background: #f7f8fc;
+  color: var(--ink);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.page__content {
-  line-height: 1.6;
-  max-width: 100%;
-  padding-left: 1em;
-  padding-right: 1em;
+#main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4em 2em 5em;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 3.2em;
+}
+
+@media (max-width: 1024px) {
+  #main {
+    grid-template-columns: 1fr;
+    padding: 3em 1.5em;
+  }
+}
+
+.sidebar {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 2.4em 2.6em;
+  box-shadow: 0 24px 48px rgba(31, 42, 55, 0.08);
+  position: sticky;
+  top: 2.5em;
+  height: fit-content;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    position: relative;
+    top: 0;
+  }
+}
+
+.sidebar .author__avatar img {
+  border-radius: 18px;
+  margin-bottom: 1.6em;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+}
+
+.sidebar .author__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.2em;
+  color: var(--ink);
+}
+
+.sidebar .author__bio {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72em;
+  color: var(--muted);
+  margin-bottom: 1.8em;
+}
+
+.author__urls-wrapper > .btn {
+  display: none;
+}
+
+.author__urls {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.author__urls li {
+  margin-bottom: 0.9em;
+  font-size: 0.92em;
+  color: var(--ink);
+}
+
+.author__urls i {
+  color: var(--muted);
+  margin-right: 0.75em;
+}
+
+.author__urls a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.author__urls a:hover {
+  color: var(--accent);
 }
 
 .page__inner-wrap {
-  max-width: 100%;
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 3.2em 3.4em 4em;
+  box-shadow: 0 24px 56px rgba(31, 42, 55, 0.08);
+}
+
+.page__inner-wrap header,
+.page__title,
+.page__meta,
+.page__meta-title {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .page__inner-wrap {
+    padding: 2.4em 1.8em;
+  }
+}
+
+.page__content {
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.page__content h1,
+.page__content h2,
+.page__content summary {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--accent);
 }
 
 .page__content h2 {
-  margin-top: 1.8em;
-  margin-bottom: 0.8em;
-  font-weight: 600;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 0.3em;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
 
 .page__content h3 {
-  margin-top: 1.4em;
-  margin-bottom: 0.4em;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 1.15em;
   font-weight: 600;
-  color: #333;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  color: var(--ink);
 }
 
 .page__content p {
-  color: #444;
-  line-height: 1.65;
+  color: var(--ink);
+  line-height: 1.75;
   text-align: justify;
   text-justify: inter-word;
+  margin-bottom: 1.2em;
 }
 
 .page__content li {
-  color: #444;
-  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 0.5em;
 }
 
 .page__content strong {
   font-weight: 600;
-  color: #222;
+  color: var(--ink);
 }
 
 .page__content ul {
-  margin-top: 0.6em;
-  margin-bottom: 1em;
+  padding-left: 1.1em;
 }
 
+.accordion {
+  border-top: 1px solid var(--line);
+  padding: 2em 0;
+}
+
+.accordion summary {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.88em;
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  position: relative;
+  padding-right: 2.4em;
+  cursor: pointer;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion summary::after {
+  content: '\203A';
+  font-size: 1.4em;
+  font-weight: 300;
+  color: var(--muted);
+  position: absolute;
+  right: 0;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.accordion[open] summary::after {
+  transform: rotate(90deg);
+  color: var(--accent);
+}
+
+.accordion summary:hover {
+  color: var(--ink);
+}
+
+.accordion-body,
+.accordion p {
+  margin-top: 1.4em;
+}
 
 .pdf-preview {
   width: 100%;
   height: 320px;
   border: 1px solid #dfe3e8;
-  border-radius: 6px;
-  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
-  margin: 1.2em 0 0.4em 0;
+  border-radius: 14px;
+  box-shadow: 0 14px 32px rgba(31, 42, 55, 0.12);
+  margin: 1.6em 0 0.6em 0;
   background: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .pdf-preview {
+    height: 240px;
+  }
 }
 
 .pdf-caption {
   font-size: 0.85em;
-  color: #5a626d;
+  color: var(--muted);
   text-align: center;
-  margin-bottom: 1.4em;
+  margin-bottom: 1.8em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
+.equation {
+  font-size: 0.78em;
+  text-align: center;
+  overflow-x: auto;
+  padding: 0.6em 0;
+}
+
+.equation::-webkit-scrollbar {
+  height: 6px;
+}
+
+.equation::-webkit-scrollbar-thumb {
+  background: #cbd5f5;
+  border-radius: 3px;
+}
+</style>
 .equation {
   font-size: 0.78em;
   text-align: center;
