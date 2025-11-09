@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Kaan Demir"
 title_separator          : "-"
 name                     : &name "Kaan Demir"
-description              : &description "Ph.D. Candidate in Computer Science"
+description              : &description "Ph.D. Student in Computer Science"
 url                      : https://demirka.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "demirka/demirka.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Kaan Demir"
   avatar           : "profile.jpg"
-  bio              : "Ph.D. Candidate in Computer Science (Evolutionary Computation & Machine Learning)"
+  bio              : "Ph.D. Student"
   location         : "Wellington, New Zealand"
   employer         :
   pubmed           :
@@ -175,34 +175,9 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
 
 # Defaults
 defaults:
-  # _research
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: ""
@@ -210,41 +185,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 # Sass/SCSS
 sass:

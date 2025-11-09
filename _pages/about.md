@@ -1,33 +1,66 @@
 ---
 permalink: /
-title: "About Me"
-excerpt: "About me"
+title: "Kaan Demir"
+excerpt: "Ph.D. Student"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a Ph.D. candidate in Computer Science at Victoria University of Wellington (VUW), specializing in Evolutionary Computation and Machine Learning. My research focuses on developing novel evolutionary algorithms for feature selection in multi-label classification problems, with particular emphasis on sparsity-based approaches.
+<div style="text-align: center; margin-bottom: 2em;">
+  <h1 style="margin-bottom: 0.2em;">Kaan Demir</h1>
+  <p style="font-size: 1.2em; color: #666; margin-top: 0;">Ph.D. Student</p>
+  <p style="color: #888;">Victoria University of Wellington | Wellington, New Zealand</p>
+</div>
 
-## Research Interests
+---
 
-My primary research areas include:
-* **Evolutionary Computation**: Genetic Programming, Particle Swarm Optimization, and other evolutionary algorithms
-* **Machine Learning**: Multi-label classification, feature selection, and dimensionality reduction
-* **Optimization**: Multi-objective optimization and sparsity-based methods
+## Education
 
-## Academic Background
+**Ph.D. in Computer Science (AI)**  
+*Victoria University of Wellington* | 2024 (expected)
 
-I completed my Bachelor of Science (BSc) and BSc(Hons) 1st Class, both in Computer Science with a specialization in Artificial Intelligence, at Victoria University of Wellington in 2019 and 2020, respectively. I am an active member of the Evolutionary Computation Research Group (ECRG) at VUW, where I have contributed as the primary author of several peer-reviewed publications at international conferences.
+**BSc(Hons) 1st Class in Computer Science (AI)**  
+*Victoria University of Wellington* | 2020
 
-## Professional Experience
+**BSc in Computer Science (AI)**  
+*Victoria University of Wellington* | 2019
 
-Throughout my academic journey, I have served as a Head Tutor and Tutor for various courses in the School of Engineering and Computer Science at VUW, including:
-* COMP307 (Machine Learning and Data Mining)
-* COMP309 (Machine Learning Tools and Techniques)
-* SWEN304 (Database System Engineering)
-* COMP103 (Data Structures and Algorithms)
-* COMP132 (Introduction to Computer Science)
+---
 
-I have also held research scholarships focusing on evolutionary computation applications in feature selection and classification problems.
+## Work Experience
+
+**Head Tutor**  
+*Victoria University of Wellington* | Mar 2021 - Nov 2021
+- T1: COMP307 & SWEN304
+- T2: COMP309 (Head), COMP132 & COMP103
+
+**Research Scholarship**  
+*Victoria University of Wellington* | Nov 2020 - Feb 2021
+- Research in Evolutionary Computation for Multi-label Feature Selection
+
+**Tutor**  
+*Victoria University of Wellington* | Mar 2020 - Oct 2020
+- T1: COMP307 | T2: COMP309
+
+**Research Scholarship**  
+*Victoria University of Wellington* | Nov 2019 - Feb 2020
+- Research in Evolutionary Computation for Multi-objective Feature Selection in Classification
+
+**Research Assistant**  
+*Victoria University of Wellington* | Nov 2018 - Aug 2019
+- Clustering using expectation maximisation in Python
+- Model selection and generalized linear models in R
+
+---
+
+## Skills
+
+**Programming Languages:** Python, Java, R, SQL, CQL, JSON, C
+
+---
+
+<div style="text-align: center; margin-top: 3em;">
+  <a href="files/Resume___Kaan.pdf" class="btn btn--primary" style="font-size: 1.1em; padding: 0.8em 2em;">Download Resume (PDF)</a>
+</div>
