@@ -42,9 +42,16 @@ body {
   color: #333;
 }
 
-.page__content p, .page__content li {
+.page__content p {
   color: #444;
   line-height: 1.65;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.page__content li {
+  color: #444;
+  line-height: 1.6;
 }
 
 .page__content strong {
@@ -55,6 +62,22 @@ body {
 .page__content ul {
   margin-top: 0.6em;
   margin-bottom: 1em;
+}
+
+.pdf-preview {
+  width: 100%;
+  height: 420px;
+  border: 1px solid #dfe3e8;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  margin: 1.2em 0 0.4em 0;
+}
+
+.pdf-caption {
+  font-size: 0.85em;
+  color: #5a626d;
+  text-align: center;
+  margin-bottom: 1.4em;
 }
 
 /* Accordion styles */
@@ -223,20 +246,42 @@ Thesis: *Evolutionary Representation Learning of Structured Multi-label Data*
 <details class="accordion" markdown="1">
 <summary>Research Highlights</summary>
 
-My PhD research established novel theoretical foundations for multi-objective machine learning, bridging evolutionary computation with statistical learning theory. This work advances our understanding of how to systematically navigate complex trade-offs in AI systems—essential for real-world deployment where multiple objectives (accuracy, fairness, efficiency) compete.
+My research pairs theoretical guarantees with production-grade AI engineering, building trustworthy systems for high-stakes environments.
 
-**Adversarial Robustness via Many-Objective Optimisation**  
-Developed the first evolutionary framework for structured adversarial attacks on multi-label systems, proving that many-objective optimisation can systematically expose vulnerabilities across label dependencies. This work demonstrates how evolutionary algorithms can generate sophisticated test cases that reveal model brittleness in ways gradient-based methods cannot capture. [*IEEE Trans. on Evolutionary Computation, 2025*]
+### Evolutionary Adversarial Training for Multi-Label Security (TEVC 2025)
+Multi-label models carry real security risk when malicious actors tamper with co-occurring labels. I developed a CMA-ES driven adversarial training framework that operates in tabulated domains, crafting structured yet concealable perturbations without needing access to the target model. The many-objective formulation balances attack success (81–100% in evaluation), robustness, and stealth—giving public-sector teams a realistic picture of how resilient their classifiers truly are.
 
-**Theoretical Guarantees for Feature Selection**  
-Established mathematical proof that maximising Lebesgue measure in objective space guarantees convergence to Bayes-optimal predictors across multiple loss functions simultaneously. This theorem provides the first rigorous justification for using hypervolume-based evolutionary algorithms in representation learning, connecting measure theory to practical ML optimisation. [View proof formulation](files/extra_content/proof.tex)
+<object data="{{ '/files/extra_content/flowchart_mlmap.pdf#toolbar=0&navpanes=0&scrollbar=0' | relative_url }}" type="application/pdf" class="pdf-preview">
+  <p>Inline preview unavailable. <a href="{{ '/files/extra_content/flowchart_mlmap.pdf' | relative_url }}" target="_blank" rel="noopener">Open the adversarial training flowchart</a>.</p>
+</object>
+<p class="pdf-caption">CMA-ES orchestrated adversarial training pipeline across proxy and target multi-label models.</p>
 
-**Dual-Structured Representation Learning**  
-Designed a particle swarm framework that jointly optimises feature sparsity and label structure, incorporating graph regularisation to preserve semantic relationships. The dual subspace architecture enables simultaneous discovery of relevant features and label dependencies—a critical capability for domains like medical diagnosis where both feature economy and output structure matter. [Visualisation](files/extra_content/lebesgue1.pdf)
+<object data="{{ '/files/extra_content/structured_adversarial.pdf#toolbar=0&navpanes=0&scrollbar=0' | relative_url }}" type="application/pdf" class="pdf-preview">
+  <p>Inline preview unavailable. <a href="{{ '/files/extra_content/structured_adversarial.pdf' | relative_url }}" target="_blank" rel="noopener">Open adversarial perturbation analysis</a>.</p>
+</object>
+<p class="pdf-caption">Visual analysis of structured adversarial examples demonstrating concealability across correlated labels.</p>
 
-**Multi-Objective ML Methodology**  
-Created comprehensive frameworks mapping the landscape of multi-objective machine learning approaches, taxonomising when different evolutionary strategies (decomposition, dominance-based, indicator-based) are theoretically optimal for different problem structures. [Framework diagram](files/extra_content/flowchart_mlmap.pdf)
+### Consistent Lebesgue Measure Multi-Label Learner (CLML)
+Surrogate losses often undermine multi-label consistency. CLML maximises a Lebesgue hypervolume to align simultaneously with conflicting loss functions, delivering a provably consistent learner that still runs on lightweight feed-forward architectures. The approach outperforms graph-enhanced and perturbation-heavy baselines, showing that principled measure design can eclipse brute-force model complexity.
 
-These contributions bridge academic rigour with practical AI engineering—proving that sophisticated optimisation theory directly translates to more robust, interpretable, and deployable ML systems.
+<object data="{{ '/files/extra_content/lebesgue1.pdf#toolbar=0&navpanes=0&scrollbar=0' | relative_url }}" type="application/pdf" class="pdf-preview">
+  <p>Inline preview unavailable. <a href="{{ '/files/extra_content/lebesgue1.pdf' | relative_url }}" target="_blank" rel="noopener">Open Lebesgue measure illustration</a>.</p>
+</object>
+<p class="pdf-caption">Geometric interpretation of the Lebesgue measure maximisation that underpins CLML.</p>
+
+#### Excerpts from the Consistency Proof
+The key result links hypervolume maximisation to convergence towards Bayes predictors across three loss families:
+
+$$
+\lim_{n \to \infty} \lambda\big(H(F^{(n)}, R)\big) = \lambda\big(H(\mathbb{P}^{B}, R)\big) \implies \bigwedge_{v \in \{1,2,3\}} R_{\mathcal{L}_v}\big(f^{(n)}\big) \to R^{B}_{\mathcal{L}_v}(f).
+$$
+
+Pareto dominance ensures every non-Bayes solution is strictly outperformed along at least one loss surface:
+
+$$
+\forall i: L_i(f_\beta) \leq L_i(f_\gamma) \land \exists k: L_k(f_\beta) < L_k(f_\gamma), \quad f_\beta \in \mathbb{P}^{B},\; f_\gamma \notin \mathbb{P}^{B}.
+$$
+
+These theorems anchor the empirical findings and give decision-makers confidence that performance gains stem from sound statistical guarantees.
 
 </details>
