@@ -59,53 +59,53 @@ body {
 
 /* Accordion styles */
 .accordion-section {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 .accordion-header {
   cursor: pointer;
-  padding: 1em;
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 4px;
+  padding: 0.9em 0;
   font-weight: 600;
-  font-size: 1.3em;
-  color: #2c3e50;
-  transition: all 0.3s ease;
+  font-size: 1.4em;
+  color: #333;
+  transition: all 0.2s ease;
   user-select: none;
+  border-bottom: 2px solid #e0e0e0;
+  position: relative;
 }
 
 .accordion-header:hover {
-  background: #e9ecef;
+  color: #2c3e50;
+  border-bottom-color: #2c3e50;
 }
 
 .accordion-header.active {
-  background: #2c3e50;
-  color: white;
-  border-color: #2c3e50;
+  color: #2c3e50;
+  border-bottom-color: #2c3e50;
 }
 
 .accordion-header::after {
-  content: '▼';
-  float: right;
-  font-size: 0.8em;
-  transition: transform 0.3s ease;
+  content: '›';
+  position: absolute;
+  right: 0;
+  font-size: 1.4em;
+  font-weight: 300;
+  transition: transform 0.2s ease;
+  color: #999;
 }
 
 .accordion-header.active::after {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
+  color: #2c3e50;
 }
 
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  padding: 0 1em;
+  display: none;
+  padding: 1.2em 0;
 }
 
 .accordion-content.active {
-  max-height: 5000px;
-  padding: 1.5em 1em;
+  display: block;
 }
 </style>
 
