@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Kaan Demir"
+title                    : "Dr. Kaan Demir"
 title_separator          : "-"
-name                     : &name "Kaan Demir"
-description              : &description "Ph.D. Student in Computer Science"
+name                     : &name "Dr. Kaan Demir"
+description              : &description "AI & Data Engineer"
 url                      : https://demirka.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "demirka/demirka.github.io"
@@ -80,9 +80,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Kaan Demir"
+  name             : "Dr. Kaan Demir"
   avatar           : "profile.jpg"
-  bio              : "Ph.D. Student"
+  bio              : "AI & Data Engineer | Senior Data & AI Expert"
   location         : "Wellington, New Zealand"
   employer         :
   pubmed           :
