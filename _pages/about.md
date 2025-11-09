@@ -8,20 +8,48 @@ redirect_from:
   - /about.html
 ---
 
-<div style="text-align: center; margin-bottom: 2em;">
-  <h1 style="margin-bottom: 0.2em;">Dr. Kaan Demir</h1>
-  <p style="font-size: 1.1em; color: #555; margin-top: 0;">AI/ML Engineer</p>
-  <p style="color: #777; margin-top: 0.5em;">
-    <a href="mailto:demirkaan97@gmail.com" style="color: #777; text-decoration: none;">demirkaan97@gmail.com</a> | 
-    <a href="tel:+6427669200" style="color: #777; text-decoration: none;">+64 27 669 2008</a>
-  </p>
-  <p style="color: #777;">
-    <a href="https://www.linkedin.com/in/kaan-demir-1936a9104/" style="color: #777;">LinkedIn</a> | 
-    <a href="https://scholar.google.com/citations?user=5uEaJosAAAAJ&hl=en" style="color: #777;">Google Scholar</a>
-  </p>
-</div>
+<style>
+body {
+  font-size: 0.88em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
----
+.page__content {
+  line-height: 1.6;
+}
+
+.page__content h2 {
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  font-weight: 600;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.3em;
+}
+
+.page__content h3 {
+  margin-top: 1.4em;
+  margin-bottom: 0.4em;
+  font-weight: 600;
+  color: #333;
+}
+
+.page__content p, .page__content li {
+  color: #444;
+  line-height: 1.65;
+}
+
+.page__content strong {
+  font-weight: 600;
+  color: #222;
+}
+
+.page__content ul {
+  margin-top: 0.6em;
+  margin-bottom: 1em;
+}
+</style>
 
 ## Professional Profile
 
@@ -112,9 +140,3 @@ Thesis: *Evolutionary Representation Learning of Structured Multi-label Data*
 - K. Demir, B. H. Nguyen, B. Xue and M. Zhang, "Multi-Label Black-Box Attacks via Evolutionary Structured Many-Objective Adversarial Perturbations," in *IEEE Transactions on Evolutionary Computation*, 2025.
 - K. Demir, B. H. Nguyen, B. Xue and M. Zhang, "Dual Sparse Structured Subspaces and Graph Regularisation for Particle Swarm Optimisation-Based Multi-Label Feature Selection," in *IEEE Computational Intelligence Magazine*, 2024.
 - K. Demir, B. H. Nguyen, B. Xue and M. Zhang, "Co-operative Co-evolutionary Many-objective Embedded Multi-label Feature Selection with Decomposition-based PSO," in *Proceedings of the Genetic and Evolutionary Computation Conference (GECCO '23)*, 2023.
-
----
-
-<div style="text-align: center; margin-top: 3em;">
-  <a href="files/Resume___Kaan.pdf" class="btn btn--primary" style="font-size: 1.1em; padding: 0.8em 2em;">Download Full Resume (PDF)</a>
-</div>

@@ -81,15 +81,15 @@ analytics:
 # Site Author
 author:
   name             : "Dr. Kaan Demir"
-  avatar           : "profile.jpg"
-  bio              : "AI & Data Engineer | Senior Data & AI Expert"
+  avatar           : "profile-photo.jpg"
+  bio              : "AI & Data Engineer"
   location         : "Wellington, New Zealand"
   employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=5uEaJosAAAAJ&hl=en"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  email            : "demirkaan97@gmail.com"
+  researchgate     :
+  uri              : "files/Resume___Kaan.pdf"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      :
   lastfm           :
-  linkedin         :
+  linkedin         : "kaan-demir-1936a9104"
   orcid            : 
   pinterest        :
   soundcloud       :
