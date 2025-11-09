@@ -10,7 +10,7 @@ redirect_from:
 
 <div style="text-align: center; margin-bottom: 2em;">
   <h1 style="margin-bottom: 0.2em;">Dr. Kaan Demir</h1>
-  <p style="font-size: 1.1em; color: #555; margin-top: 0;">AI & Data Engineer</p>
+  <p style="font-size: 1.1em; color: #555; margin-top: 0;">AI/ML Engineer</p>
   <p style="color: #777; margin-top: 0.5em;">
     <a href="mailto:demirkaan97@gmail.com" style="color: #777; text-decoration: none;">demirkaan97@gmail.com</a> | 
     <a href="tel:+6427669200" style="color: #777; text-decoration: none;">+64 27 669 2008</a>
