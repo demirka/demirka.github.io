@@ -58,99 +58,82 @@ body {
 }
 
 /* Accordion styles */
-.accordion-section {
-  margin-bottom: 0.3em;
+.accordion {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 1.6em;
+  padding-top: 1em;
 }
 
-.accordion-header {
+.accordion:first-of-type {
+  border-top: 1px solid transparent;
+}
+
+.accordion summary {
+  list-style: none;
   cursor: pointer;
-  padding: 0.9em 0;
   font-weight: 600;
-  font-size: 1.4em;
-  color: #333;
-  transition: all 0.2s ease;
-  user-select: none;
-  border-bottom: 2px solid #e0e0e0;
+  font-size: 1.3em;
+  color: #2c3e50;
   position: relative;
+  padding-right: 2.5em;
 }
 
-.accordion-header:hover {
-  color: #2c3e50;
-  border-bottom-color: #2c3e50;
+.accordion summary::-webkit-details-marker {
+  display: none;
 }
 
-.accordion-header.active {
-  color: #2c3e50;
-  border-bottom-color: #2c3e50;
-}
-
-.accordion-header::after {
+.accordion summary::after {
   content: '›';
   position: absolute;
   right: 0;
   font-size: 1.4em;
   font-weight: 300;
-  transition: transform 0.2s ease;
-  color: #999;
+  color: #b0b0b0;
+  transform: rotate(90deg);
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.accordion-header.active::after {
-  transform: rotate(90deg);
+.accordion[open] summary::after {
+  transform: rotate(270deg);
   color: #2c3e50;
 }
 
-.accordion-content {
-  display: none;
-  padding: 1.2em 0;
+.accordion summary:hover {
+  color: #1b2a41;
 }
 
-.accordion-content.active {
-  display: block;
+.accordion-body {
+  margin-top: 1em;
 }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const headers = document.querySelectorAll('.accordion-header');
-  
-  headers.forEach(header => {
-    header.addEventListener('click', function() {
-      const wasActive = this.classList.contains('active');
-      
-      // Close all sections
-      document.querySelectorAll('.accordion-header').forEach(h => {
-        h.classList.remove('active');
-      });
-      document.querySelectorAll('.accordion-content').forEach(c => {
-        c.classList.remove('active');
-      });
-      
-      // Open clicked section if it wasn't already active
-      if (!wasActive) {
-        this.classList.add('active');
-        this.nextElementSibling.classList.add('active');
+document.addEventListener('DOMContentLoaded', function () {
+  const accordions = Array.from(document.querySelectorAll('.accordion'));
+
+  accordions.forEach((accordion) => {
+    accordion.addEventListener('toggle', function () {
+      if (this.open) {
+        accordions.forEach(other => {
+          if (other !== this) {
+            other.removeAttribute('open');
+          }
+        });
       }
     });
   });
-  
-  // Open first section by default
-  if (headers.length > 0) {
-    headers[0].click();
+
+  if (accordions.length > 0) {
+    accordions[0].setAttribute('open', '');
   }
 });
 </script>
 
-<div class="accordion-section">
-  <div class="accordion-header">Professional Profile</div>
-  <div class="accordion-content">
+## Professional Profile
 
 Senior data and AI expert with over 7 years of combined experience spanning government, consulting, and academic sectors. Deep knowledge of AI from an academic perspective with practical delivery of cloud-native, production-ready solutions in consulting/public sector scenes. Proven in leading client-facing, high-impact AI projects from concept to deployment, driving innovation and responsible governance.
-  </div>
-</div>
 
-<div class="accordion-section">
-  <div class="accordion-header">Expertise</div>
-  <div class="accordion-content">
+## Expertise
 
 - **AI Engineering & Fine-Tuning**: RLHF, SFT, PPO, DPO, deliberative alignment, guardrails, Chain-of-Thought (CoT) for policy compliance
 - **LLMs & Advanced AI**: AutoGen, LangChain, Agentic AI, RAG, NER, LoRA, Transformers, PyTorch
@@ -160,12 +143,9 @@ Senior data and AI expert with over 7 years of combined experience spanning gove
 - **Software Development**: Python, Java, R, Pandas, REST APIs, asynchronous programming, front-end and back-end integration (React, TS, Next.JS, Streamlit)
 - **Leadership & Strategy**: Project planning, stakeholder engagement, ROI modeling, Agile/PRINCE2
 - **Research & Thought Leadership**: 10+ publications in internationally recognised AI venues
-  </div>
-</div>
 
-<div class="accordion-section">
-  <div class="accordion-header">Experience</div>
-  <div class="accordion-content">
+<details class="accordion" open markdown="1">
+<summary>Experience</summary>
 
 ### AI & Data Engineer
 **DataSing** | 2025 - Current
@@ -182,7 +162,7 @@ Senior data and AI expert with over 7 years of combined experience spanning gove
 **Financial Intelligence Unit, New Zealand Police** | 2024 - 2025 (18 Months)
 
 - **LLM Applications**: Prototyped retrieval-augmented generation (RAG) solutions using LangChain and HuggingFace for legislative ingestion
-- **ETL Optimization**: Led large-scale ETL performance improvement initiative across mission-critical pipelines
+- **ETL Optimisation**: Led large-scale ETL performance improvement initiative across mission-critical pipelines
 - **Governance**: Designed governance frameworks for NLP models, incorporating responsible AI principles and compliance guardrails
 - **Strategic Delivery**: Managed end-to-end solution lifecycle from business case to proof-of-concept, leveraging MLOps platforms (DataRobot) for deployment
 - **Senior Leadership Engagement**: Presented strategic insights to governance groups, impacting digital transformation
@@ -213,12 +193,11 @@ Senior data and AI expert with over 7 years of combined experience spanning gove
 
 - **Statistical and Data Analysis**: Performed analysis of data using traditional statistical and data science methods
 - **Research Assistant**: Implemented analysis methodology and generated experiments for output to aid in research
-  </div>
-</div>
 
-<div class="accordion-section">
-  <div class="accordion-header">Education</div>
-  <div class="accordion-content">
+</details>
+
+<details class="accordion" markdown="1">
+<summary>Education</summary>
 
 **PhD in Computer Science & Artificial Intelligence**  
 *Victoria University of Wellington* | 2021 - 2024  
@@ -229,22 +208,20 @@ Thesis: *Evolutionary Representation Learning of Structured Multi-label Data*
 
 **Bachelor of Science in Computer Science & Artificial Intelligence**  
 *Victoria University of Wellington* | 2017 - 2019
-  </div>
-</div>
 
-<div class="accordion-section">
-  <div class="accordion-header">Selected Publications</div>
-  <div class="accordion-content">
+</details>
+
+<details class="accordion" markdown="1">
+<summary>Selected Publications</summary>
 
 - K. Demir, B. H. Nguyen, B. Xue and M. Zhang, "Multi-Label Black-Box Attacks via Evolutionary Structured Many-Objective Adversarial Perturbations," in *IEEE Transactions on Evolutionary Computation*, 2025.
 - K. Demir, B. H. Nguyen, B. Xue and M. Zhang, "Dual Sparse Structured Subspaces and Graph Regularisation for Particle Swarm Optimisation-Based Multi-Label Feature Selection," in *IEEE Computational Intelligence Magazine*, 2024.
 - K. Demir, B. H. Nguyen, B. Xue and M. Zhang, "Co-operative Co-evolutionary Many-objective Embedded Multi-label Feature Selection with Decomposition-based PSO," in *Proceedings of the Genetic and Evolutionary Computation Conference (GECCO '23)*, 2023.
-  </div>
-</div>
 
-<div class="accordion-section">
-  <div class="accordion-header">Research Highlights</div>
-  <div class="accordion-content">
+</details>
+
+<details class="accordion" markdown="1">
+<summary>Research Highlights</summary>
 
 My PhD research established novel theoretical foundations for multi-objective machine learning, bridging evolutionary computation with statistical learning theory. This work advances our understanding of how to systematically navigate complex trade-offs in AI systems—essential for real-world deployment where multiple objectives (accuracy, fairness, efficiency) compete.
 
@@ -261,5 +238,5 @@ Designed a particle swarm framework that jointly optimises feature sparsity and 
 Created comprehensive frameworks mapping the landscape of multi-objective machine learning approaches, taxonomising when different evolutionary strategies (decomposition, dominance-based, indicator-based) are theoretically optimal for different problem structures. [Framework diagram](files/extra_content/flowchart_mlmap.pdf)
 
 These contributions bridge academic rigour with practical AI engineering—proving that sophisticated optimisation theory directly translates to more robust, interpretable, and deployable ML systems.
-  </div>
-</div>
+
+</details>
