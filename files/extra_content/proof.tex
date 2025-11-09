@@ -1,0 +1,115 @@
+\documentclass[letter]{article}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+
+% hyperref makes hyperlinks in the resulting PDF.
+% If your build breaks (sometimes temporarily if a hyperlink spans a page)
+% please comment out the following usepackage line and replace
+% \usepackage{icml2024} with \usepackage[nohyperref]{icml2024} above.
+\usepackage{hyperref}
+
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% For theorems and such
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+\usepackage{tikz,siunitx}
+\usetikzlibrary{positioning,calc,decorations.pathreplacing,decorations.markings,shapes.geometric,decorations.pathreplacing}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage{svg}
+%\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{multirow}
+
+% if you use cleveref..
+\usepackage[capitalize,noabbrev]{cleveref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THEOREMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Todonotes is useful during development; simply uncomment the next line
+%    and comment out the line below the next line to turn off comments
+%\usepackage[disable,textsize=tiny]{todonotes}
+\usepackage[disable,textsize=tiny]{todonotes}
+\begin{document}
+
+\section{Proof (Re-written)}
+
+\begin{theorem}[A Consistent Lebesgue Measure]\label{theoremconsistency} Given a sequence $F^{(n)}$, the maximisation of the Lebesgue measure $\lambda(H(F^{(n)},R))$ is consistent with the minimisation of $L_1$, $L_2$, and $L_3$:
+
+\begin{equation}
+    \begin{gathered}
+        \underset{n\to\infty}{\text{lim}}\lambda(H(F^{(n)},R))\to \lambda(H(\mathbb{P}^{B},R))\quad 
+        \implies \\
+        R_{\mathcal{L}_1}(f^{(n)}) \to R^B_{\mathcal{L}_1}(f) \wedge \\
+         R_{\mathcal{L}_2}(f^{'(n)}) \to R^B_{\mathcal{L}_2}(f') \wedge \\
+         R_{\mathcal{L}_3}(f^{''(n)}) \to R^B_{\mathcal{L}_3}(f'').
+    \end{gathered}
+    \end{equation}
+
+\end{theorem}
+
+\begin{proof}[Proof of Theorem \ref{theoremconsistency}]
+    
+    We will use contradiction to prove that maximising $\lambda(H(F^{(n)},R))$ ensures convergence to the Bayes predictors.
+
+    Assumption: suppose there exists a sequence $F^{(n)}$ such that maximising $\lambda(H(F^{(n)},R)))$ does \textit{not} converge to the Bayes predictors for $L_1$, $L_2$, or $L_3$. Specifically, assume there exists a function $f_\gamma\in F^{(n)}$ such that:
+    \begin{equation}
+        f_\gamma \notin \mathbb{P}^B \land R_{L_v}^B(f_\gamma) \quad \exists v \in \{1,2,3\}.
+    \end{equation}
+
+    \begin{itemize}
+        \item Properties of $f_\gamma \notin \mathbb{P}^B$:
+
+        If $f_\gamma \notin \mathbb{P}^B$, then by the definition of Pareto optimality, there exists another function $f_{\beta} \in \mathbb{P}^B$ such that:
+        \begin{equation}
+            \forall i: L_i(f_{\beta}) \leq L_i(f_\gamma) \land \exists k: L_k(f_{\beta}) < L_k (f_\gamma).
+        \end{equation}
+        \item Contradiction for the Bayes Predictor:
+
+        If $f_\gamma$ is a Bayes predictor for $L_v$, then:
+        \begin{equation}
+            R_{L_v}(f_\gamma) = R_{L_v}^B(f_\gamma) \implies L_v(f_\gamma) \leq L_v (f_\beta).
+        \end{equation}
+        However, this contradicts $f_\beta$ strictly dominating $f_\gamma$ on $L_k$ (where $k\neq v$ or $k=v$ with strict inequality). Therefore, $f_\gamma \notin \mathbb{P}^B$ cannot be a Bayes predictor.
+        \item Convergence of $F^{(n)}$ to $\mathbb{P}^B$:
+
+        Maximising $\lambda(H(F^{(n)},R))$ ensures that non-dominated solutions increasingly dominate the objective space $Z$ as $n \to \inf$. This implies:
+        \begin{equation}
+            \lambda(H(F^{(n)},R)) \to \lambda (H(\mathbb{P}^B,R)) \quad as \quad n\to\inf.
+        \end{equation}
+        Since $\mathbb{P}^B$ contains only Pareto optimal functions, and every Bayes predictor belongs to $\mathbb{P}^B$, this convergence guarantees that the sequence $F^{(n)}$ minimises $L_1$, $L_2$, and $L_3$ asymptotically.
+    \end{itemize}
+
+    By contradiction, the assumption that $\lambda(H(F^{(n)},R))$ does \textit{not} converge to the Bayes predictors is false. Therefore:
+
+    \begin{equation}
+    \begin{gathered}
+        \underset{n\to\infty}{\text{lim}}\lambda(H(F^{(n)},R))\to \lambda(H(\mathbb{P}^{B},R))\quad 
+        \implies \\
+        R_{\mathcal{L}_1}(f^{(n)}) \to R^B_{\mathcal{L}_1}(f) \wedge \\
+         R_{\mathcal{L}_2}(f^{'(n)}) \to R^B_{\mathcal{L}_2}(f') \wedge \\
+         R_{\mathcal{L}_3}(f^{''(n)}) \to R^B_{\mathcal{L}_3}(f'').
+    \end{gathered}
+    \end{equation}
+    \end{proof}
+  
+\end{document}
