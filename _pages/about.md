@@ -80,6 +80,13 @@ body {
   margin-bottom: 1.4em;
 }
 
+.equation {
+  font-size: 0.9em;
+  text-align: center;
+  overflow-x: auto;
+  padding: 0.6em 0;
+}
+
 /* Accordion styles */
 .accordion {
   border-top: 1px solid #e6e6e6;
@@ -251,36 +258,34 @@ My research pairs theoretical guarantees with production-grade AI engineering, b
 ### Evolutionary Adversarial Training for Multi-Label Security (TEVC 2025)
 Multi-label models carry real security risk when malicious actors tamper with co-occurring labels. I developed a CMA-ES driven adversarial training framework that operates in tabulated domains, crafting structured yet concealable perturbations without needing access to the target model. The many-objective formulation balances attack success (81–100% in evaluation), robustness, and stealth—giving public-sector teams a realistic picture of how resilient their classifiers truly are.
 
-<object data="{{ '/files/extra_content/flowchart_mlmap.pdf#toolbar=0&navpanes=0&scrollbar=0' | relative_url }}" type="application/pdf" class="pdf-preview">
-  <p>Inline preview unavailable. <a href="{{ '/files/extra_content/flowchart_mlmap.pdf' | relative_url }}" target="_blank" rel="noopener">Open the adversarial training flowchart</a>.</p>
-</object>
+<iframe src="{{ '/files/extra_content/flowchart_mlmap.pdf#toolbar=0&navpanes=0&scrollbar=0' | relative_url }}" class="pdf-preview" title="CMA-ES adversarial training flowchart"></iframe>
 <p class="pdf-caption">CMA-ES orchestrated adversarial training pipeline across proxy and target multi-label models.</p>
 
-<object data="{{ '/files/extra_content/structured_adversarial.pdf#toolbar=0&navpanes=0&scrollbar=0' | relative_url }}" type="application/pdf" class="pdf-preview">
-  <p>Inline preview unavailable. <a href="{{ '/files/extra_content/structured_adversarial.pdf' | relative_url }}" target="_blank" rel="noopener">Open adversarial perturbation analysis</a>.</p>
-</object>
+<iframe src="{{ '/files/extra_content/structured_adversarial.pdf#toolbar=0&navpanes=0&scrollbar=0' | relative_url }}" class="pdf-preview" title="Structured adversarial perturbation analysis"></iframe>
 <p class="pdf-caption">Visual analysis of structured adversarial examples demonstrating concealability across correlated labels.</p>
 
 ### Consistent Lebesgue Measure Multi-Label Learner (CLML)
 Surrogate losses often undermine multi-label consistency. CLML maximises a Lebesgue hypervolume to align simultaneously with conflicting loss functions, delivering a provably consistent learner that still runs on lightweight feed-forward architectures. The approach outperforms graph-enhanced and perturbation-heavy baselines, showing that principled measure design can eclipse brute-force model complexity.
 
-<object data="{{ '/files/extra_content/lebesgue1.pdf#toolbar=0&navpanes=0&scrollbar=0' | relative_url }}" type="application/pdf" class="pdf-preview">
-  <p>Inline preview unavailable. <a href="{{ '/files/extra_content/lebesgue1.pdf' | relative_url }}" target="_blank" rel="noopener">Open Lebesgue measure illustration</a>.</p>
-</object>
+<iframe src="{{ '/files/extra_content/lebesgue1.pdf#toolbar=0&navpanes=0&scrollbar=0' | relative_url }}" class="pdf-preview" title="Lebesgue measure illustration"></iframe>
 <p class="pdf-caption">Geometric interpretation of the Lebesgue measure maximisation that underpins CLML.</p>
 
 #### Excerpts from the Consistency Proof
 The key result links hypervolume maximisation to convergence towards Bayes predictors across three loss families:
 
+<div class="equation">
 $$
 \lim_{n \to \infty} \lambda\big(H(F^{(n)}, R)\big) = \lambda\big(H(\mathbb{P}^{B}, R)\big) \implies \bigwedge_{v \in \{1,2,3\}} R_{\mathcal{L}_v}\big(f^{(n)}\big) \to R^{B}_{\mathcal{L}_v}(f).
 $$
+</div>
 
 Pareto dominance ensures every non-Bayes solution is strictly outperformed along at least one loss surface:
 
+<div class="equation">
 $$
 \forall i: L_i(f_\beta) \leq L_i(f_\gamma) \land \exists k: L_k(f_\beta) < L_k(f_\gamma), \quad f_\beta \in \mathbb{P}^{B},\; f_\gamma \notin \mathbb{P}^{B}.
 $$
+</div>
 
 These theorems anchor the empirical findings and give decision-makers confidence that performance gains stem from sound statistical guarantees.
 
