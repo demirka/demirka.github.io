@@ -34,6 +34,7 @@
 \usepackage{ifthen} % for conditional statements
 \usepackage{needspace} % for avoiding page brake right after the section title
 \usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{qrcode} % for generating QR codes
 
 % Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
@@ -176,16 +177,10 @@
         \kern 5.0 pt%
         \AND%
         \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/kaan-demir-1936a9104/}{https://www.linkedin.com/in/kaan-demir-1936a9104/}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://scholar.google.com/citations?user=5uEaJosAAAAJ\&hl=en}{https://scholar.google.com/citations?user=5uEaJosAAAAJ\&hl=en/}}%
-        \kern 5.0 pt%
-        \AND%
-        \kern 5.0 pt%
-        \mbox{\hrefWithoutArrow{https://demirka.github.io}{https://demirka.github.io}}%
-        \kern 5.0 pt%
+        \begin{tabularx}{\textwidth}{l l l}
+            LinkedIn: & Google Scholar: & Website: \\
+            \qrcode{https://www.linkedin.com/in/kaan-demir-1936a9104/} & \qrcode{https://scholar.google.com/citations?user=5uEaJosAAAAJ\&hl=en} & \qrcode{https://demirka.github.io}
+        \end{tabularx}
     \end{header}
 
     \vspace{5 pt - 0.3 cm}
