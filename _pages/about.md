@@ -18,6 +18,13 @@ body {
 
 .page__content {
   line-height: 1.6;
+  max-width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.page__inner-wrap {
+  max-width: 100%;
 }
 
 .page__content h2 {
@@ -57,7 +64,7 @@ Senior data and AI expert with over 7 years of combined experience spanning gove
 
 ---
 
-## Core Competencies
+## Expertise
 
 - **AI Engineering & Fine-Tuning**: RLHF, SFT, PPO, DPO, deliberative alignment, guardrails, Chain-of-Thought (CoT) for policy compliance
 - **LLMs & Advanced AI**: AutoGen, LangChain, Agentic AI, RAG, NER, LoRA, Transformers, PyTorch
