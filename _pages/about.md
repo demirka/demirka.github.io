@@ -21,11 +21,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4em 2em 5em;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 3.2em;
+}
+
+@media (max-width: 1024px) {
+  #main {
+    grid-template-columns: 1fr;
+    padding: 3em 1.5em;
+  }
+}
+
 .sidebar {
   background: #ffffff;
   border-radius: 22px;
   padding: 2.4em 2.6em;
   box-shadow: 0 24px 48px rgba(31, 42, 55, 0.08);
+  position: sticky;
+  top: 2.5em;
+  height: fit-content;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    position: relative;
+    top: 0;
+  }
 }
 
 .sidebar .author__avatar img {
@@ -85,6 +111,13 @@ body {
   border-radius: 26px;
   padding: 3.2em 3.4em 4em;
   box-shadow: 0 24px 56px rgba(31, 42, 55, 0.08);
+}
+
+.page__inner-wrap header,
+.page__title,
+.page__meta,
+.page__meta-title {
+  display: none;
 }
 
 @media (max-width: 768px) {
