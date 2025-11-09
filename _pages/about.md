@@ -64,13 +64,15 @@ body {
   margin-bottom: 1em;
 }
 
+
 .pdf-preview {
   width: 100%;
-  height: 420px;
+  height: 320px;
   border: 1px solid #dfe3e8;
   border-radius: 6px;
   box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
   margin: 1.2em 0 0.4em 0;
+  background: #ffffff;
 }
 
 .pdf-caption {
@@ -81,7 +83,7 @@ body {
 }
 
 .equation {
-  font-size: 0.9em;
+  font-size: 0.78em;
   text-align: center;
   overflow-x: auto;
   padding: 0.6em 0;
